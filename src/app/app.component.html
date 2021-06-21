@@ -1,3 +1,45 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!-- font-link -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <ion-menu contentId="main" menuId="main-menu" side="end" type="overlay">
+    <ion-header class="ion-no-border">
+      <ion-toolbar>
+        <img src="assets/media/logo.png" alt="" srcset="">
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div class="sidemenu">
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item (click)="scrollTo('section-3')">
+            <ion-label>About Us</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-label>Meet Our Team</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-label>Contact Us</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+      </div>
+      <div class="social-media">
+        <h4>Follow Us</h4>
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="3"><img src="assets/media/facebook.png" alt=""></ion-col>
+            <ion-col size="3"><img src="assets/media/google.png" alt=""></ion-col>
+            <ion-col size="3"><img src="assets/media/instagram.png" alt=""></ion-col>
+            <ion-col size="3"><img src="assets/media/linkedin.png" alt=""></ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

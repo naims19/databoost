@@ -1,20 +1,237 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-app>
+  <!-- font-link -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  <ion-header class="ion-no-border">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <!-- <ion-buttons slot="end">
+        <ion-menu-button menu="main-menu"></ion-menu-button>
+      </ion-buttons> -->
+      <ion-buttons (click)="buttonTest()" slot="start" id="test">
+        <ion-button >
+          <ion-icon slot="end" name="menu-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons>
+        
+        <div class="topnav">
+          <!-- Navigation links (hidden by default) -->
+          <div id="myLinks">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="12">
+                  <ion-button (click)="myFunction()">
+                    <ion-icon slot="end" name="menu-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12">
+                  <ion-button (click)="scrollTo('section-3')">About Us</ion-button>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12">
+                  <ion-button (click)="scrollTo('section-4')">Meet Our Team</ion-button>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="12">
+                  <ion-button (click)="scrollTo('section-5')">Contact</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </div>
+      </ion-buttons>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <ion-content>
+      <div class="picture" id="section-1">
+        <img src="assets/media/pic1.jpeg" alt="">
+      </div>
+      <div class="word">
+        <span>WEB | APP | TRAINING</span>
+        <h4>Affordable Web And App 
+        Solution For Your Enterprise 
+        With The Local Expertise</h4>
+      <ion-button expand="block" fill="clear" shape="round">
+        Learn More
+      </ion-button>
+    </div>
+    <div class="word2">
+      <p>Trusted By</p>
+    </div>
+    <div class="trusted">
+      <ion-card>
+        <img src="assets/media/ardhmillena.PNG" alt="">
+      </ion-card>
+      <ion-card>
+        <img src="assets/media/dwa.PNG" alt="">
+      </ion-card>
+      <ion-card>
+        <img src="assets/media/kvs1.PNG" alt="">
+      </ion-card>
+      <ion-card>
+        <img src="assets/media/pekema.PNG" alt="">
+      </ion-card>
+      <ion-card>
+        <img src="assets/media/upm.PNG" alt="">
+      </ion-card>
+    </div>
+    <section id="section-3">
+      <div class="word3">
+        <span>WHAT WE DO</span>
+        <h4>A crew of Designers And Developers <br>
+        Build Extraordinary Digital <br> 
+        Experiences</h4>
+      </div>
+      <div class="job-type">
+        <ion-list>
+          <ion-item>
+            <img src="assets/media/web-logo.PNG" alt="" srcset="">
+            <div class="description">
+              <h4>Website</h4>
+              <p>Our designs are optimized for cross-device use and offer
+                an experience that is immediately acessible.
+              </p>
+            </div>
+          </ion-item>
+          <ion-item>
+            <img src="assets/media/apps-logo.PNG" alt="" srcset="">
+            <div class="description">
+              <h4>Mobile Apps</h4>
+              <p>We work closely with you to define a product strategy that aligns
+                perfectly with your business goals.
+              </p>
+            </div>
+          </ion-item>
+          <ion-item>
+            <img src="assets/media/training-logo.PNG" alt="" srcset="">
+            <div class="description">
+              <h4>Training</h4>
+              <p>We give trainings to students, teachers, lecturers, product owner,
+                programmers to become a better person. 
+              </p>
+            </div>
+          </ion-item>
+        </ion-list>
+        <img src="assets/media/pic2.PNG" alt="" srcset="">
+      </div>
+    </section>
+    
+    <div class="word3">
+      <h4>OUR PORTFOLIO</h4>
+    </div>
+    <div class="portfolio">
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="12">
+            <img src="assets/media/portfolio 1.PNG" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <img src="assets/media/portfolio 2.PNG" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <img src="assets/media/portfolio 3.PNG" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <img src="assets/media/portfolio 4.PNG" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <img src="assets/media/portfolio 5.PNG" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <img src="assets/media/portfolio 6.PNG" alt="">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div class="team" id="section-4">
+      <div class="word4">
+        <span>MEET OUR TEAM</span>
+        <h4>A Collaborative Team Member Works Together To Deliver Each Project</h4>
+      </div>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="12">
+            <img src="assets/media/team 1.PNG" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12">
+              <img src="assets/media/team 2.jpg" alt="">
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <img src="assets/media/team 3.jpg" alt="">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <img src="assets/media/team 4.jpg" alt="">
+          </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <img src="assets/media/team 5.jpg" alt="">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <img src="assets/media/team 6.jpg" alt="">
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+    </div>
+    <div class="word5" id="section-5">
+      <span>NEED HELP ?</span>
+      <h4>We Always Ready to Help You</h4>
+    </div>
+    <div class="contact">
+      <ion-input type="text" placeholder="Your name"></ion-input>
+      <ion-input type="text" placeholder="Your email"></ion-input>
+      <ion-input type="text" placeholder="Your subject"></ion-input>
+      <ion-textarea placeholder="Your messages"></ion-textarea>
+      <ion-button  expand="block" fill="clear" shape="round">
+        Submit
+      </ion-button>
+    </div>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d151620.39695316076!2d101.61914176287783!3d3.018506688311089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb389db4148e7%3A0x9a04dafab816212f!2sDataboost%20Sdn%20Bhd!5e0!3m2!1sen!2smy!4v1623658626816!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <div class="place-detail">
+      <br>
+      <h4>Our Location</h4>
+      <p>9-2 Jalan Tasik Prima 5/1, Block A, Prima Biz <br>
+      Hub, 47150 Puchong, Selangor
+      </p>
+      <h4>Our Hours</h4>
+      <p>9:00 AM - 22:00 PM <br>
+        Monday - Sunday
+      </p>
+      <h4>Our Contact</h4>
+      <p>Phone : +60 133256126 <br>
+        Email : databoost.sdnbhd@gmail.com
+      </p>
+      <br>
+    </div>
+    <ion-footer>
+      <ion-toolbar>
+        <p>Copyright 2021 Databoost Sdn. Bhd</p>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-content>
+  
+</ion-app>

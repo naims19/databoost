@@ -1,0 +1,54 @@
+*{
+    font-family: 'Poppins', 'Montserrat', arial;
+}
+ion-toolbar{
+    --background: none;
+    background-color: #fff;
+    img{
+        width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0.5rem;
+    }
+}
+ion-content{
+    --background:none;
+    background-color: #fff;
+}
+.sidemenu{
+    ion-list{
+        --background: none;
+        background-color: #fff;
+        margin-top: 2rem;
+
+        ion-item{
+            --background: none;
+            background-color: #fff;
+            --border-color:none;
+            ion-label{
+                text-align: center;
+                color: #3A5897;
+                font-family: 'Poppins';
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+.social-media{
+    margin-top: 5rem;
+    h4{
+        color: #000;
+        text-align: center;
+        font-weight: 600;
+    }
+    ion-col{
+        img{
+            width: 60%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
